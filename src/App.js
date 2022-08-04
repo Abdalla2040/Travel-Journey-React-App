@@ -8,12 +8,19 @@ function App() {
   const data = CardData.map((e)=> {
     return <MainContent 
       key={e.country}
-      img={e.img}
-      country={e.country}
-      view={e.view}
-      title={e.title}
-      date={e.date}
-      description={e.description}
+
+      /**
+        Another way passing data to the component
+       */
+      // img={e.img}
+      // country={e.country}
+      // view={e.view}
+      // title={e.title}
+      // date={e.date}
+      // description={e.description}
+
+      /** Trying out the spread operator */
+      {...e}
     />
   })
   return (
